@@ -1,0 +1,30 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title PokeAPI
+    link(rel='stylesheet', href='/styles.css')
+  body
+    h1 PokeAPI
+
+    form#searchForm(method='post', action='/search')
+      .button-container
+        input(type='text', id='pokemonName', placeholder='Enter Pokemon Name', name='pokemonName')
+        button(type='submit') Search
+        button(type='button', id='saveButton') Save
+
+    h1 Pokemon data
+    #pokemonData
+      img#pokemonImage(src='', alt='Pokemon Image')
+      #pokemonDetails
+        p#pokemonNameDisplay
+        p#pokemonHeight
+        p#pokemonWeight
+        p#pokemonBaseExperience
+      h2 JSON
+      pre#pokemonJson
+
+    h1 Saved Pokemon
+    #savedPokemonCards
+    script(src='/script.js')
